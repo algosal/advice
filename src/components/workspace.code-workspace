@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\2012-dec14-react"
+		},
+		{
+			"path": "..\\..\\..\\..\\.nuget"
+		},
+		{
+			"path": "..\\..\\..\\..\\noteswebpage"
+		},
+		{
+			"path": "..\\..\\..\\..\\project-2\\ProjectTwo_Tequesha_ReactIt"
+		},
+		{
+			"path": "..\\..\\..\\..\\sal"
+		},
+		{
+			"path": "..\\..\\..\\..\\calliber"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\xampp\\htdocs"
+		},
+		{
+			"path": "..\\..\\..\\..\\react-learning"
+		},
+		{
+			"path": "..\\..\\.."
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "2012-dec14-react\\node_modules\\typescript\\lib",
+		"git.ignoreLimitWarning": true
+	}
+}
