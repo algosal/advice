@@ -1,3 +1,4 @@
+import { wrap } from "module";
 import { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 import callAffirmation from "../dbaccess/dbaccess";
@@ -17,7 +18,7 @@ export default function MyAffirmation() {
         let meaningsArray = wordFromDictionaryMeanings.meanings; 
         let stateVar ="Meanings of " + wordFromDictionaryMeanings.word + " are:\n\n0. ";
         let conti ="";
-       console.log(meaningsArrayLength)
+       //console.log(meaningsArrayLength)
 
         for(let i = 0;i<meaningsArrayLength; i++){
            
@@ -42,8 +43,8 @@ export default function MyAffirmation() {
     return (
         <View style={[styles.container, {alignItems: 'flex-start', }]}>
             <View style={[{top:-150, height:120,}]}>
-              <Text style={{color:"gold", fontSize:18, fontWeight:"bold", paddingLeft:10,  }}>Advice on this click</Text>
-            <Text style={styles.blue}>{affy}</Text>
+              <Text style={{color:"gold", fontSize:18, fontWeight:"bold", paddingLeft:10,  }}>Affirmation Advice</Text>
+            <Text style={styles.orange}>{affy}</Text>
             </View>
            
             <View style = {{padding:10, width:'100%', top: -150, height:125,}}>
@@ -88,9 +89,10 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 14,
     },
-    blue: {
-      color: 'blue',
-      width: '80%',
+    orange: {
+      flexWrap: "wrap", 
+      color: 'orange',
+      width: 300,
       paddingLeft: 15,
     },
     btn:{

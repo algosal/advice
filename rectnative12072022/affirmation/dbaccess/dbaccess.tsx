@@ -1,14 +1,31 @@
 import axios from "axios";
+import { stringify } from "querystring";
 
 async function callAffirmation() {
-    //    return await axios.get(`https://api.goprogram.ai/inspiration`)
-    return await axios.get(`https://api.adviceslip.com/advice`)
+    //    return await axios.get(`https://api.goprogram.ai/inspiration`)     
+    //return await axios.get(`https://api.adviceslip.com/advice`)
+    return await axios.get(`https://salmansaeed.us/affirmations/affirmations.php`)
     .then(res => {
-      const advice = res.data.slip.advice;
-       // console.log(res.data);
+        const affi = res.data.affirmation;
+        stringify(affi); 
+        //console.log(affi);
+        return affi;  
+    }).catch((error)=>{console.log(error)});
+
+   /* const config = {
+        headers:{
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': '*',
+        }
+      };
+    return await axios.get(`https://favqs.com/api/qotd`, config)
+    .then(res => {
+        //const advice = res.data.slip.advice;
+        const advice = res.data.quote.body;
+        console.log(res);
         return advice; 
     }).catch((error)=>{console.log(error)});
-    
+    */
 }
 
 export async function callInspiration() {
